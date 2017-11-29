@@ -33,7 +33,7 @@ public class SpringController {
     @ResponseBody
     List<Integer> home() {
         System.out.println("121211123");
-        logger.info("日志在这里！");
+        logger.info("日志不在这里！");
         List<Integer> list =  userMapper.getAll();
         System.out.println(list.size()+list.size());
         return list;
