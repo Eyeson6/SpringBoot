@@ -33,5 +33,6 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.4.3.RELEASE'
     compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.1.1'
     compile group: 'mysql', name: 'mysql-connector-java'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-redis'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
