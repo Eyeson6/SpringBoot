@@ -5,6 +5,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -17,6 +18,7 @@ import java.io.IOException;
  */
 @SpringBootApplication
 @EnableScheduling
+@EnableCaching
 @MapperScan("com.mapper")
 public class Application {
 
