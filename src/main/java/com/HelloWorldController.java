@@ -1,6 +1,7 @@
 package com;
 
 import com.mapper.UserMapper;
+import com.mq.HelloSender;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -25,6 +26,9 @@ public class HelloWorldController {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Autowired
+    private HelloSender helloSender;
+
     @RequestMapping("/getUser")
     public Map<String,Object> getUser() {
         System.out.println("11");
@@ -35,6 +39,7 @@ public class HelloWorldController {
         resultModel.put("test",list);
         redisTemplate.opsForValue().increment("zj",2);
         System.out.println(redisTemplate.opsForValue().get("zj"));
+        helloSender.send();
         return resultModel;
     }
 }
